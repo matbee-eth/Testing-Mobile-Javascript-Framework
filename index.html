@@ -25,10 +25,10 @@
 			var myApp = new $WI.Application();
 		}
 	</script>
-	<script src="js/alice.js"></script>
-    <script src="js/src/alice.wobble.js"></script>	
 </head>
 <body onload="fin()">
+	<!--<script src="js/alice-min.js"></script>
+    <script src="js/src/alice.wobble.js"></script>	-->
 	<script>
 		// var phonegap = new PhoneGap();
 		// //must call this to let the device know that the app is ready
@@ -40,7 +40,7 @@
 	</script>
 	<app>
 		<screen id="entryScreen" >
-			<textbox id="mainScreenTextBox" name="mainScreenTextBox" width:"100px" hintText="wtfbbq" minLength="1" maxLength="6"></textbox>
+			<textbox id="mainScreenTextBox" name="mainScreenTextBox" width="300px" hintText="wtfbbq" minLength="1" maxLength="6"></textbox>
 		</screen>
 		
 		<screen id="testchild" name="testchild">
@@ -68,14 +68,14 @@
 						Six
 					</li>
 					<li style="height:60px;">
-						<textbox id="txt" name="txt" height="50px" width="200px" hintText="heyoooo" minLength="1" maxLength="6"></textbox>
+						<textbox id="txt" name="txt" height="50px" width="200px" hintText="heyoooo" minLength="1" maxLength="5"></textbox>
 					</li>
 				</ul>
 			</scroller>
 		</screen>
 
 		<screen id="appTwoSectionOne" name="appTwoSectionOne">
-			<input id="apptext" type="text" class="textbox"> </input>
+			<input id="apptext" name="screenTwoText" type="text" class="textbox"> </input>
 		</screen>
 	</app>
 	
