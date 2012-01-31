@@ -5,66 +5,45 @@ $WI.Class.Application = new $WI.Class({
 		$WI.Method.App.load(app);
 
 		var screenOne = $WI.Method.App.getCurrentScreen();
-		var txt = screenOne.getWidgetByName("mainScreenTextBox");
-		$(txt._inputElement).focus(function() {
-	    	alice.wobble(txt._inputElement, 20, 5, "top-left", 1000, 10, "ease-in-out", -1);
+		var mainScreenTextBox = screenOne.getWidgetByName("mainScreenTextBox");
+		$(mainScreenTextBox._inputElement).focus(function() {
+	    	//alice.wobble(txt._inputElement, 20, 5, "top-left", 1000, 10, "ease-in-out", -1);
 	  	});
-	  	$(txt._inputElement).blur(function() {
+	  	$(mainScreenTextBox._inputElement).blur(function() {
 	    	// alice.wobble("MyDiv", 20, 5, "top-left", 1000, 10, "ease-in-out", -1);
 	  	});
+	  	var screenTwo = $WI.Method.App.getScreenByName("listScreen");
 
-		txt._inputElement.onkeypress = function(e) {
+	  	mainScreenTextBox._inputElement.onkeypress = function(e) {
 			if (e.keyCode == 13) // On Enter.
             {
                 $WI.Method.App.pushScreen("listScreen");
-				var list = $WI.Method.App.getCurrentScreen().getWidgetByName("list");
+	  			// var txtScreenTwo = screenTwo.getWidgetByName("mainScreenTextBox");
+
+				var list = screenTwo.getWidgetByName("list");
 				
 				var added = document.createElement("div");
 				added.innerText = "Added!";
 				list.addItem(added);
+
+			  	var txt = screenTwo.getWidgetByName("txt");
+			  	var list = screenTwo.getWidgetByName("list");	  	
+
+			  	txt._inputElement.onkeypress = function (e) {
+			  		if (e.keyCode == 13) 
+			  		{
+						var added = document.createElement("div");
+						added.innerText = "Added: + " + txt.getText();
+						list.addItem(added);
+			  		}
+			  	};
             }
 		};
+		
 	}
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $WI.Application = function() {
-	
 	chain = function(obj) {
         for (var fn in obj) {
                 if (typeof obj[fn] == "function") {
