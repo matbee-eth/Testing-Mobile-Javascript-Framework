@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+ Include these scripts.
+ system2.0.js
+-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Wtfbbq</title>
+	<link rel="stylesheet" media="screen" type="text/css" href="main.css" />
+	<!--<script type="text/javascript" src="phonegap.js"></script>-->
+	<!-- <script type="text/javascript" src="morf.js"></script>-->
+	<script type="text/javascript" src="jquery-1.6.2.min.js"></script> 
+	<script type="text/javascript" src="jquery.animate-enhanced.min.js"></script> 
+	<script type="text/javascript" src="prismlib/system2.0.js"></script>
+	<script type="text/javascript" src="widgets\Chain.js"></script>
+	<script type="text/javascript" src="widgets\Base.js"></script>
+	<script type="text/javascript" src="widgets\Textbox.js"></script>
+	<script type="text/javascript" src="iscroll.js"></script>
+	<script type="text/javascript" src="widgets\Scroller.js"></script>
+	<script type="text/javascript" src="class\screen.js"></script>
+	<script type="text/javascript" src="App.js"></script>
+	<script type="text/javascript">
+		var fin = function() {
+			var myApp = new $WI.Application();
+		}
+	</script>
+	<script src="js/alice.js"></script>
+    <script src="js/src/alice.wobble.js"></script>	
+</head>
+<body onload="fin()">
+	<script>
+		// var phonegap = new PhoneGap();
+		// //must call this to let the device know that the app is ready
+		// navigator.device.deviceReady();
+
+		// window.addEventListener("palmsystem", function(e) {
+		// 	console.log("system message: " + JSON.stringify(e.data));
+		// });
+	</script>
+	<app>
+		<screen id="entryScreen" >
+			<textbox id="mainScreenTextBox" name="mainScreenTextBox" width:"100px" hintText="wtfbbq" minLength="1" maxLength="6"></textbox>
+		</screen>
+		
+		<screen id="testchild" name="testchild">
+		</screen>
+
+		<screen id="listScreen" name="listScreen">
+			<scroller name="list" id="list">
+				<ul name="listList">
+					<li>
+						One
+					</li>
+					<li>
+						Two
+					</li>
+					<li>
+						Three
+					</li>
+					<li>
+						Four
+					</li>
+					<li>
+						Five
+					</li>
+					<li>
+						Six
+					</li>
+					<li style="height:60px;">
+						<textbox id="txt" name="txt" height="50px" width="200px" hintText="heyoooo" minLength="1" maxLength="6"></textbox>
+					</li>
+				</ul>
+			</scroller>
+		</screen>
+
+		<screen id="appTwoSectionOne" name="appTwoSectionOne">
+			<input id="apptext" type="text" class="textbox"> </input>
+		</screen>
+	</app>
+	
+</body>
+</html>

@@ -1,0 +1,116 @@
+@-webkit-keyframes FadeIn { 0% { -webkit-transform: scale(0); opacity:0; } 100% { -webkit-transform: scale(1); opacity:1;} }
+@-webkit-keyframes FadeOut { 0% { -webkit-transform: scale(1); opacity: 1;} 100% { -webkit-transform: scale(0); opacity:0;} }
+@-webkit-keyframes FadeOutIn { 0% { -webkit-transform: scale(3); opacity: 0;} 100% { -webkit-transform: scale(1); opacity:1;} }
+
+.Screen {
+	/*-webkit-transition: all 1s linear;*/
+	-webkit-transition: opacity 300ms ease-out;
+	position: absolute;
+	top:0px;
+	left:0px;
+	margin-top: 5px;
+	width: 100%;
+	height: 100%;
+}
+
+.fadeIn > * {
+	-webkit-transform: translate(0px);
+	-webkit-animation-name: FadeIn;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 300ms;
+	opacity: 1;
+}
+
+.fadeOut > * {
+	-webkit-transform: translate(320px);
+	-webkit-animation-name: FadeOut;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 300ms;
+	opacity: 0;
+}
+
+.fadeOutIn > * {
+	-webkit-transform: translate(320px);
+	-webkit-animation-name: FadeOutIn;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 300ms;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: inherit;
+}
+
+textbox {
+	margin: 0 auto;
+	width: 300px;
+}
+
+.animate > * {
+	-webkit-animation-name: moveOver;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 800ms;
+}
+
+.textbox > input {
+	border: 2px solid #d7d7d7;
+	border-radius: 5px;
+
+	padding-right:10px;
+	padding-left:10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	font-size: 30px;
+	color: red;
+	font-family: Arial, Sans-Serif;
+
+	width: 100px;
+	margin:0 auto;
+}
+
+.separator {
+	
+}
+
+.scroller {
+	position:relative;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+	float:left;
+	width:100%;
+	padding:0;
+}
+
+ul {
+	position:relative;
+	list-style:none;
+	padding:0;
+	margin:0;
+	width:100%;
+	text-align:left;
+}
+
+li {
+	padding:0 10px;
+	height:50px;
+	line-height:40px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #fff;
+	background-color:#fafafa;
+	font-size:14px;
+}
+
+li > a {
+	display:block;
+}
+
+
+/*
+* Generated CSS mess.
+*/
+
+@-webkit-keyframes moveOver{0%{-webkit-transform:matrix(-0.000000,1.000000,-1.000000,-0.000000,598.000000,0.000000)}1%{-webkit-transform:matrix(0.001188,0.999999,-0.999999,0.001188,597.547791,0.000000)}2%{-webkit-transform:matrix(0.004752,0.999989,-0.999989,0.004752,596.191040,0.000000)}3%{-webkit-transform:matrix(0.010691,0.999943,-0.999943,0.010691,593.929871,0.000000)}4%{-webkit-transform:matrix(0.019005,0.999819,-0.999819,0.019005,590.764221,0.000000)}5%{-webkit-transform:matrix(0.029694,0.999559,-0.999559,0.029694,586.694092,0.000000)}6%{-webkit-transform:matrix(0.042752,0.999086,-0.999086,0.042752,581.719421,0.000000)}7%{-webkit-transform:matrix(0.058175,0.998306,-0.998306,0.058175,575.840332,0.000000)}8%{-webkit-transform:matrix(0.075953,0.997111,-0.997111,0.075953,569.056824,0.000000)}9%{-webkit-transform:matrix(0.096073,0.995374,-0.995374,0.096073,561.368774,0.000000)}10%{-webkit-transform:matrix(0.143243,0.989688,-0.989688,0.143243,543.279236,0.000000)}11%{-webkit-transform:matrix(0.170227,0.985405,-0.985405,0.170227,532.877808,0.000000)}12%{-webkit-transform:matrix(0.199412,0.979916,-0.979916,0.199412,521.571838,0.000000)}13%{-webkit-transform:matrix(0.230733,0.973017,-0.973017,0.230733,509.361450,0.000000)}15%{-webkit-transform:matrix(0.264110,0.964493,-0.964493,0.264110,496.246552,0.000000)}16%{-webkit-transform:matrix(0.299440,0.954115,-0.954115,0.299440,482.227203,0.000000)}17%{-webkit-transform:matrix(0.336603,0.941647,-0.941647,0.336603,467.303375,0.000000)}18%{-webkit-transform:matrix(0.375452,0.926842,-0.926842,0.375452,451.475037,0.000000)}19%{-webkit-transform:matrix(0.415814,0.909450,-0.909450,0.415814,434.742249,0.000000)}20%{-webkit-transform:matrix(0.457486,0.889217,-0.889217,0.457486,417.105011,0.000000)}21%{-webkit-transform:matrix(0.500235,0.865890,-0.865890,0.500235,398.563263,0.000000)}22%{-webkit-transform:matrix(0.543793,0.839219,-0.839219,0.543793,379.117035,0.000000)}23%{-webkit-transform:matrix(0.587857,0.808965,-0.808965,0.587857,358.766357,0.000000)}24%{-webkit-transform:matrix(0.632083,0.774900,-0.774900,0.632083,337.511200,0.000000)}25%{-webkit-transform:matrix(0.676093,0.736817,-0.736817,0.676093,315.351562,0.000000)}26%{-webkit-transform:matrix(0.719464,0.694530,-0.694530,0.719464,292.287445,0.000000)}27%{-webkit-transform:matrix(0.761737,0.647886,-0.647886,0.761737,268.318848,0.000000)}28%{-webkit-transform:matrix(0.802411,0.596771,-0.596771,0.802411,243.445801,0.000000)}29%{-webkit-transform:matrix(0.840950,0.541113,-0.541113,0.840950,217.668259,0.000000)}30%{-webkit-transform:matrix(0.876779,0.480893,-0.480893,0.876779,190.986252,0.000000)}31%{-webkit-transform:matrix(0.909295,0.416153,-0.416153,0.909295,163.399765,0.000000)}32%{-webkit-transform:matrix(0.937865,0.347001,-0.347001,0.937865,134.908798,0.000000)}33%{-webkit-transform:matrix(0.961837,0.273622,-0.273622,0.961837,105.513359,0.000000)}34%{-webkit-transform:matrix(0.980547,0.196284,-0.196284,0.980547,75.213448,0.000000)}35%{-webkit-transform:matrix(0.993326,0.115343,-0.115343,0.993326,44.009064,0.000000)}36%{-webkit-transform:matrix(0.999511,0.031254,-0.031254,0.999511,11.900200,0.000000)}37%{-webkit-transform:matrix(0.999635,0.027005,-0.027005,0.999635,10.281862,0.000000)}38%{-webkit-transform:matrix(0.997722,0.067454,-0.067454,0.997722,25.699051,0.000000)}39%{-webkit-transform:matrix(0.994427,0.105430,-0.105430,0.994427,40.211761,0.000000)}40%{-webkit-transform:matrix(0.990024,0.140901,-0.140901,0.990024,53.820000,0.000000)}41%{-webkit-transform:matrix(0.984772,0.173853,-0.173853,0.984772,66.523766,0.000000)}42%{-webkit-transform:matrix(0.978911,0.204287,-0.204287,0.978911,78.323051,0.000000)}43%{-webkit-transform:matrix(0.972665,0.232214,-0.232214,0.972665,89.217865,0.000000)}44%{-webkit-transform:matrix(0.966237,0.257656,-0.257656,0.966237,99.208199,0.000000)}45%{-webkit-transform:matrix(0.959813,0.280641,-0.280641,0.959813,108.294060,0.000000)}46%{-webkit-transform:matrix(0.953561,0.301201,-0.301201,0.953561,116.475449,0.000000)}47%{-webkit-transform:matrix(0.947629,0.319372,-0.319372,0.947629,123.752365,0.000000)}48%{-webkit-transform:matrix(0.942151,0.335188,-0.335188,0.942151,130.124802,0.000000)}49%{-webkit-transform:matrix(0.937240,0.348686,-0.348686,0.937240,135.592758,0.000000)}50%{-webkit-transform:matrix(0.932993,0.359895,-0.359895,0.932993,140.156250,0.000000)}51%{-webkit-transform:matrix(0.929491,0.368846,-0.368846,0.929491,143.815262,0.000000)}52%{-webkit-transform:matrix(0.926798,0.375561,-0.375561,0.926798,146.569794,0.000000)}53%{-webkit-transform:matrix(0.924962,0.380061,-0.380061,0.924962,148.419861,0.000000)}54%{-webkit-transform:matrix(0.924015,0.382357,-0.382357,0.924015,149.365448,0.000000)}55%{-webkit-transform:matrix(0.923973,0.382457,-0.382457,0.923973,149.406555,0.000000)}56%{-webkit-transform:matrix(0.924838,0.380360,-0.380360,0.924838,148.543198,0.000000)}57%{-webkit-transform:matrix(0.926595,0.376062,-0.376062,0.926595,146.775360,0.000000)}58%{-webkit-transform:matrix(0.929212,0.369548,-0.369548,0.929212,144.103043,0.000000)}59%{-webkit-transform:matrix(0.932643,0.360802,-0.360802,0.932643,140.526260,0.000000)}60%{-webkit-transform:matrix(0.936825,0.349799,-0.349799,0.936825,136.044998,0.000000)}61%{-webkit-transform:matrix(0.941680,0.336511,-0.336511,0.941680,130.659256,0.000000)}62%{-webkit-transform:matrix(0.947111,0.320906,-0.320906,0.947111,124.369049,0.000000)}63%{-webkit-transform:matrix(0.953006,0.302951,-0.302951,0.953006,117.174362,0.000000)}64%{-webkit-transform:matrix(0.959235,0.282609,-0.282609,0.959235,109.075203,0.000000)}65%{-webkit-transform:matrix(0.965650,0.259846,-0.259846,0.965650,100.071564,0.000000)}66%{-webkit-transform:matrix(0.972085,0.234629,-0.234629,0.972085,90.163452,0.000000)}67%{-webkit-transform:matrix(0.978356,0.206929,-0.206929,0.978356,79.350861,0.000000)}68%{-webkit-transform:matrix(0.984260,0.176724,-0.176724,0.984260,67.633797,0.000000)}69%{-webkit-transform:matrix(0.989578,0.144001,-0.144001,0.989578,55.012264,0.000000)}70%{-webkit-transform:matrix(0.994068,0.108758,-0.108758,0.994068,41.486252,0.000000)}71%{-webkit-transform:matrix(0.997476,0.071009,-0.071009,0.997476,27.055763,0.000000)}72%{-webkit-transform:matrix(0.999526,0.030783,-0.030783,0.999526,11.720800,0.000000)}73%{-webkit-transform:matrix(0.999983,0.005802,-0.005802,0.999983,2.208863,0.000000)}74%{-webkit-transform:matrix(0.999673,0.025562,-0.025562,0.999673,9.732450,0.000000)}75%{-webkit-transform:matrix(0.999078,0.042938,-0.042938,0.999078,16.351562,0.000000)}76%{-webkit-transform:matrix(0.998321,0.057930,-0.057930,0.998321,22.066200,0.000000)}77%{-webkit-transform:matrix(0.997509,0.070539,-0.070539,0.997509,26.876362,0.000000)}78%{-webkit-transform:matrix(0.996733,0.080769,-0.080769,0.996733,30.782049,0.000000)}79%{-webkit-transform:matrix(0.996065,0.088624,-0.088624,0.996065,33.783264,0.000000)}80%{-webkit-transform:matrix(0.995562,0.094108,-0.094108,0.995562,35.880001,0.000000)}81%{-webkit-transform:matrix(0.995262,0.097226,-0.097226,0.995262,37.072262,0.000000)}82%{-webkit-transform:matrix(0.995189,0.097978,-0.097978,0.995189,37.360050,0.000000)}83%{-webkit-transform:matrix(0.995346,0.096366,-0.096366,0.995346,36.743362,0.000000)}84%{-webkit-transform:matrix(0.995723,0.092388,-0.092388,0.995723,35.222198,0.000000)}85%{-webkit-transform:matrix(0.996292,0.086042,-0.086042,0.996292,32.796562,0.000000)}86%{-webkit-transform:matrix(0.997006,0.077324,-0.077324,0.997006,29.466450,0.000000)}87%{-webkit-transform:matrix(0.997804,0.066229,-0.066229,0.997804,25.231863,0.000000)}88%{-webkit-transform:matrix(0.998608,0.052754,-0.052754,0.998608,20.092800,0.000000)}89%{-webkit-transform:matrix(0.999319,0.036896,-0.036896,0.999319,14.049262,0.000000)}90%{-webkit-transform:matrix(0.999826,0.018652,-0.018652,0.999826,7.101250,0.000000)}91%{-webkit-transform:matrix(1.000000,0.000972,-0.000972,1.000000,0.370012,0.000000)}92%{-webkit-transform:matrix(0.999946,0.010367,-0.010367,0.999946,3.946800,0.000000)}93%{-webkit-transform:matrix(0.999849,0.017386,-0.017386,0.999849,6.619112,0.000000)}94%{-webkit-transform:matrix(0.999757,0.022029,-0.022029,0.999757,8.386950,0.000000)}95%{-webkit-transform:matrix(0.999705,0.024296,-0.024296,0.999705,9.250313,0.000000)}96%{-webkit-transform:matrix(0.999707,0.024188,-0.024188,0.999707,9.209200,0.000000)}97%{-webkit-transform:matrix(0.999764,0.021705,-0.021705,0.999764,8.263613,0.000000)}98%{-webkit-transform:matrix(0.999858,0.016846,-0.016846,0.999858,6.413550,0.000000)}99%{-webkit-transform:matrix(0.999954,0.009611,-0.009611,0.999954,3.659013,0.000000)}100%{-webkit-transform:matrix(1.000000,0.000000,0.000000,1.000000,0.000000,0.000000)}}
